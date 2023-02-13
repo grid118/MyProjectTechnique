@@ -1,46 +1,13 @@
-public class Car {
-    private String carModel;
-    private CARMANYFACTURER carManufacturer;
-    private boolean state;
-
-    public Car(CARMANYFACTURER carManufacturer,String carModel, boolean state){
-        this.carManufacturer = carManufacturer;
-        this.carModel = carModel;
-        this.state = state;
-    }
-
-    public String getCarModel() {
-        return carModel;
-    }
-
-    public void setCarModel(String carModel) {
-        this.carModel = carModel;
-    }
-
-    public CARMANYFACTURER getCarManufacturer() {
-        return carManufacturer;
-    }
-
-    public void setCarManufacturer(CARMANYFACTURER carManufacturer) {
-        this.carManufacturer = carManufacturer;
-    }
-
-    public Boolean getState() {
-        return state;
-    }
-
-    public void setState(Boolean state) {
-        this.state = state;
-    }
-}
-  /*  private String[] marka = {
-            "КАМАЗ",//0
-            "ГАЗ",//1
-            "ЗИЛ",//2
-            "КрАЗ",//3
-            "МАЗ",//4
-            "УРАЛ"//5
+public class ModeliAVTO {
+    private String[] marka = {
+            "КАМАЗ",
+            "ГАЗ",
+            "ЗИЛ",
+            "КрАЗ",
+            "МАЗ",
+            "УРАЛ"
     };
+
     private String[] kamaz = {
             "КамАЗ 4310\n" + "(4310, 43105)",//0
             "КамАЗ 4310 (каталог 2004г)\n" + "(4310, 43105))",//1
@@ -95,4 +62,28 @@ public class Car {
             "УРАЛ-532361\n" + "532361-311, 532361-311П, 532361-312, 532361-312П, 532362-1026, 532362-1042, 542301-11,\n" +
                     "542301-11П, 542301-11П1, 542301-17, 542301-11-10, 542301-17-10, 542301-17-10П1, 542301-117-10" //9
     };
-*/
+    public String[] getMarka() {
+        return marka;
+    }
+
+    public String[] getKamaz() {
+        return kamaz;
+    }
+
+    public String[] getGaz() {
+        return gaz;
+    }
+
+    public String[] getKraz() {
+        return kraz;
+    }
+
+    public String[] getMaz() {
+        return maz;
+    }
+
+    public String[] getUral() {
+        return ural;
+    }
+
+}

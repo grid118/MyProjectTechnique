@@ -7,8 +7,8 @@ public class Main {
         frame.setSize(600, 400);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        StartForm form = new StartForm();
-        frame.add(form.getRootPanel());
+        GUIform startForm = new GUIform();
+        frame.add(startForm.getRootPanel());
         frame.setVisible(true);
     }
 }

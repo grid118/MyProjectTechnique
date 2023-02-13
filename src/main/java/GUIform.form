@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUIform">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="5" vgap="5">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <hspacer id="b8061">
+        <constraints border-constraint="North"/>
+      </hspacer>
+      <vspacer id="6965c">
+        <constraints border-constraint="West"/>
+      </vspacer>
+      <vspacer id="3a987">
+        <constraints border-constraint="East"/>
+      </vspacer>
+      <hspacer id="3f496">
+        <constraints border-constraint="South"/>
+      </hspacer>
+      <grid id="db9b8" binding="startForm" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <preferredSize width="600" height="400"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="fd45c" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="140" height="22"/>
+              <text value="Производитель"/>
+            </properties>
+          </component>
+          <component id="29cb2" class="javax.swing.JComboBox" binding="proizvoditelComboBox" custom-create="true">
+            <constraints/>
+            <properties>
+              <preferredSize width="400" height="30"/>
+            </properties>
+          </component>
+          <component id="3a18b" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <preferredSize width="140" height="22"/>
+              <text value="Модель"/>
+            </properties>
+          </component>
+          <component id="53d4d" class="javax.swing.JComboBox" binding="modelComboBox" custom-create="true">
+            <constraints/>
+            <properties>
+              <preferredSize width="400" height="30"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
