@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="StartForm">
+  <grid id="27dc6" binding="RootPanel" layout-manager="BorderLayout" hgap="5" vgap="5">
+    <constraints>
+      <xy x="20" y="20" width="1416" height="776"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <hspacer id="2bc0e">
+        <constraints border-constraint="North"/>
+      </hspacer>
+      <vspacer id="b80b1">
+        <constraints border-constraint="East"/>
+      </vspacer>
+      <vspacer id="e7159">
+        <constraints border-constraint="West"/>
+      </vspacer>
+      <grid id="d3381" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="5dd6c" class="javax.swing.JButton" binding="carManufacturer">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <preferredSize width="200" height="30"/>
+              <text value="Выбор производителя"/>
+            </properties>
+          </component>
+          <component id="ba34e" class="javax.swing.JComboBox" binding="markaComboBox" custom-create="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="458" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
