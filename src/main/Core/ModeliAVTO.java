@@ -62,6 +62,10 @@ public class ModeliAVTO {
             "УРАЛ-532361\n" + "532361-311, 532361-311П, 532361-312, 532361-312П, 532362-1026, 532362-1042, 542301-11,\n" +
                     "542301-11П, 542301-11П1, 542301-17, 542301-11-10, 542301-17-10, 542301-17-10П1, 542301-117-10" //9
     };
+    private String[] zil = {
+            "Пока что здесь пусто!!!!!"
+    };
+
     public String[] getMarka() {
         return marka;
     }
@@ -86,4 +90,7 @@ public class ModeliAVTO {
         return ural;
     }
 
+    public String[] getZil() {
+        return zil;
+    }
 }
