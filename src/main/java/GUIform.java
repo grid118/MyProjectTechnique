@@ -8,7 +8,10 @@ public class GUIform {
     private JPanel startForm;
     private JComboBox proizvoditelComboBox;
     private Car car;
-    private int i;
+    public GUIform(){
+
+    }
+
 
 
     public JPanel getRootPanel() {
@@ -19,13 +22,18 @@ public class GUIform {
         ModeliAVTO modeliAVTO = new ModeliAVTO();
         car = new Car(null, "", false);
         proizvoditelComboBox = new JComboBox<>(modeliAVTO.getMarka());
-        modelComboBox = new JComboBox<>(modeliAVTO.getKamaz());
+        modelComboBox = new JComboBox<>();
+        DefaultComboBoxModel model = (DefaultComboBoxModel) modelComboBox.getModel();
         proizvoditelComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
                 if (e.getStateChange() == ItemEvent.SELECTED) {
                     switch (proizvoditelComboBox.getSelectedIndex()) {
                         case 0:
+                            modelComboBox.removeAllItems();
+                            for (int i  = 0; i<modeliAVTO.getKamaz().length;i++){
+                                modelComboBox.addItem(modeliAVTO.getKamaz()[i]);
+                            }
                             car.setCarManufacturer(CARMANYFACTURER.KAMAZ);
 
                             break;

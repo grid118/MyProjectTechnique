@@ -24,5 +24,6 @@ public enum KAMAZ {
     KAMAZ_53501_6X6{
         public String getManefacturer() {return "КамАЗ 53501";}},
     KAMAZ_63501_8X8{
-        public String getManefacturer() {return "КамАЗ 63501";}}
+        public String getManefacturer() {return "КамАЗ 63501";}};
+    public abstract String getManefacturer();
 }

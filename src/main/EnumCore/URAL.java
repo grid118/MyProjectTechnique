@@ -8,5 +8,6 @@ public enum URAL {
     URAL_532301{public String getManefacturer() {return "УРАЛ-532301";}},
     URAL_55571_1121_70{public String getManefacturer() {return "УРАЛ-55571-1121-70";}},
     URAL_43204_1111_70{public String getManefacturer() {return "УРАЛ-43204-1111-70";}},
-    URAL_532361{public String getManefacturer() {return "УРАЛ-532361";}},
+    URAL_532361{public String getManefacturer() {return "УРАЛ-532361";}};
+    public abstract String getManefacturer();
 }

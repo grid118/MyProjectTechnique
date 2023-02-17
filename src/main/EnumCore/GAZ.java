@@ -26,5 +26,6 @@ public enum GAZ {
     GAZ_33104_VALDAY_EVRO3{
         public String getManefacturer() {return "ГАЗ-33104";}},
     GAZ_33106_EVRO3{
-        public String getManefacturer() {return "ГАЗ-33106";}}
+        public String getManefacturer() {return "ГАЗ-33106";}};
+    public abstract String getManefacturer();
 }
