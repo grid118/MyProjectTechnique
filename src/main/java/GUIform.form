@@ -73,7 +73,7 @@
               <text value=" Требуется ремонт"/>
             </properties>
           </component>
-          <component id="5bb98" class="javax.swing.JButton" binding="сформироватьДокументButton" default-binding="true">
+          <component id="5bb98" class="javax.swing.JButton" binding="createDocumentButton">
             <constraints/>
             <properties>
               <text value="Сформировать документ"/>

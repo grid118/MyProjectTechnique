@@ -1,6 +1,10 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class GUIform {
     private JPanel rootPanel;
@@ -9,7 +13,7 @@ public class GUIform {
     private JComboBox proizvoditelComboBox;
     private JTextArea VINTextArea;
     private JCheckBox требуетсяРемонтCheckBox;
-    private JButton сформироватьДокументButton;
+    private JButton createDocumentButton;
     private Car car;
     public GUIform(){
 
@@ -23,7 +27,7 @@ public class GUIform {
 
     private void createUIComponents() {
         ModeliAVTO modeliAVTO = new ModeliAVTO();
-        car = new Car(null, "", false);
+        car = new Car(null, "", false,"");
         proizvoditelComboBox = new JComboBox<>(modeliAVTO.getMarka());
         modelComboBox = new JComboBox<>();
         proizvoditelComboBox.addItemListener(new ItemListener() {
@@ -297,8 +301,31 @@ public class GUIform {
                 }
             }
         });
-        VINTextArea = new JTextArea();
-        VINTextArea.add
+
+       createDocumentButton = new JButton();
+        createDocumentButton.addActionListener(new ActionListener() {
+           @Override
+           public void actionPerformed(ActionEvent e) {
+               if (createDocumentButton.isSelected() && modelComboBox.isEditable()){
+               if (!требуетсяРемонтCheckBox.isSelected()){
+                   car.setVIN(VINTextArea.getText());
+                    String path = System.getProperty("user.home") + "/Desktop";
+                   try {
+                       FileWriter file = new FileWriter(path + "/" + car.getCarModel() + car.getVIN() + ".txt");
+                    file.write(car.getCarModel() +" "+ car.getVIN() + " техника находится в исправном состоянии, потребность в ремоте отсутствует");
+                       file.flush();
+                       file.close();
+                   } catch (IOException ex) {
+                       throw new RuntimeException(ex);
+                   }
+
+               }else {
+                   System.out.println("ТУТ ВЕДЕТСЯ РАЗРАБОТКА");
+               }
+           }
+           }
+       });
+
 
     }
 }
